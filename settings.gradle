@@ -1,0 +1,3 @@
+rootProject.name = 'fundsio'
+include 'fundsio-api', 'fundsio-web'
+

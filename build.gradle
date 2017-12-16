@@ -1,0 +1,20 @@
+group 'com.batiaev.fundsio'
+version '0.1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'idea'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    buildscript {
+        ext.kotlin_version = '1.2.10'
+
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+}
