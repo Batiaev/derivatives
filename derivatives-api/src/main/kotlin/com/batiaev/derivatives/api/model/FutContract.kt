@@ -9,7 +9,7 @@ import java.time.Month
  * @since 16/12/17
  */
 data class FutContract(val ticker: String,
-                       @Transient val baseAsset: String,
+                       @Transient val baseAsset: Any,
                        @Transient val year: Int,
                        @Transient val month: Month) {
     @Transient

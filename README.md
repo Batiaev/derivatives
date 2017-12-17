@@ -1,6 +1,6 @@
 # Derivatives
 
-Futures and option tickers parser.
+Futures and option tickers parser for Moscow Exchange.
 
 ## REST API
 - `GET /parse?ticker=SiH8`

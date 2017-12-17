@@ -3,6 +3,7 @@ package com.batiaev.derivatives.api.controller
 import com.batiaev.derivatives.api.Parser
 import com.batiaev.derivatives.api.model.FutContract
 import com.batiaev.derivatives.api.model.OptContract
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -14,21 +15,22 @@ import org.springframework.web.bind.annotation.RestController
  * @since 16/12/17
  */
 @RestController
-class RestController {
-
+class RestController @Autowired constructor(
+        private val parser: Parser
+) {
     @GetMapping("/parse")
     fun parse(@RequestParam(value = "ticker", defaultValue = "SiH8") ticker: String): Any {
-        return if (ticker.length == 4 || ticker.length == 6) Parser.parseFutTicker(ticker);
-        else Parser.parseFutTicker(ticker)
+        return if (ticker.length == 4 || ticker.length == 6) parser.parseFutTicker(ticker);
+        else parser.parseOptTicker(ticker)
     }
 
     @GetMapping("/parseFutures")
     fun parseFutures(@RequestParam(value = "ticker", defaultValue = "SiH8") ticker: String): FutContract {
-        return Parser.parseFutTicker(ticker)
+        return parser.parseFutTicker(ticker)
     }
 
     @GetMapping("/parseOption")
     fun parseOption(@RequestParam(value = "ticker", defaultValue = "RI130000BC6") ticker: String): OptContract {
-        return Parser.parseOptTicker(ticker)
+        return parser.parseOptTicker(ticker)
     }
 }
