@@ -1,8 +1,8 @@
-package com.batiaev.fundsio.api
+package com.batiaev.derivatives.api
 
-import com.batiaev.fundsio.api.model.FutContract
-import com.batiaev.fundsio.api.model.OptContract
-import com.batiaev.fundsio.api.model.OptionType
+import com.batiaev.derivatives.api.model.FutContract
+import com.batiaev.derivatives.api.model.OptContract
+import com.batiaev.derivatives.api.model.OptionType
 import java.time.LocalDate
 import java.time.Month
 

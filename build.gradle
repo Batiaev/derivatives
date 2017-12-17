@@ -1,4 +1,4 @@
-group 'com.batiaev.fundsio'
+group 'com.batiaev.derivatives'
 version '0.1.0-SNAPSHOT'
 
 allprojects {

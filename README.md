@@ -1,7 +1,13 @@
-# Fundsio
+# Derivatives
 
-1) Futures and option parser. E.g. /parse?ticker=RI130000BC6
+Futures and option tickers parser.
 
+## REST API
+- `GET /parse?ticker=SiH8`
+- `GET /parse?ticker=RI130000BC6`
+- `GET /parseFutures?ticker=SiH8`
+- `GET /parseOption?ticker=RI130000BC6`
 
-#Author
+# Author
+
 Anton Batiaev

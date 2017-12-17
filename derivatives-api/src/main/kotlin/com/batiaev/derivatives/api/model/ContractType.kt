@@ -1,4 +1,4 @@
-package com.batiaev.fundsio.api.model
+package com.batiaev.derivatives.api.model
 
 /**
  * ContractType

@@ -1,4 +1,4 @@
-package com.batiaev.fundsio.api
+package com.batiaev.derivatives.api
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
