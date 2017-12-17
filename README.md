@@ -8,6 +8,10 @@ Futures and option tickers parser for Moscow Exchange.
 - `GET /parseFutures?ticker=SiH8`
 - `GET /parseOption?ticker=RI130000BC6`
 
+## Test run
+
+`http://localhost:9001/derivatives/parse?ticker=Si130015BB6B`
+
 # Author
 
 Anton Batiaev
