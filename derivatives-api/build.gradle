@@ -14,6 +14,12 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-spring'
 apply plugin: 'org.springframework.boot'
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.batiaev.derivatives.api.AppKt'
+    }
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
