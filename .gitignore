@@ -30,4 +30,4 @@ hs_err_pid*
 build/
 !/gradle/
 !/gradle/wrapper/gradle-wrapper.jar
-#/derivatives-api/out/
+/derivatives-api/out/
