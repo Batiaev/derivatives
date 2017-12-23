@@ -15,3 +15,5 @@ class App
 fun main(args: Array<String>) {
     SpringApplication.run(App::class.java, *args)
 }
+
+const val MOEX_URL = "http://www.moex.com/ru/contract.aspx?code="

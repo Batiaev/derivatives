@@ -1,0 +1,3 @@
+server:
+  contextPath: /derivatives
+  port: 9001
