@@ -3,7 +3,7 @@
 Futures and option tickers parser for Moscow Exchange.
 
 ## Demo
-https://github.com/Batiaev/derivatives
+https://demo.batiaev.com/derivatives/
 
 ## REST API
 - `GET ./parse?ticker=SiH8`
