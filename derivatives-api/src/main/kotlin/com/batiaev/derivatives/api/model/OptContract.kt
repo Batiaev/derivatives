@@ -1,5 +1,6 @@
 package com.batiaev.derivatives.api.model
 
+import com.batiaev.derivatives.api.MOEX_URL
 import java.time.Month
 
 /**
@@ -19,4 +20,7 @@ data class OptContract(val ticker: String,
 
     @Transient
     val type: ContractType = ContractType.OPTION
+
+    @Transient
+    val moexDetails: String = MOEX_URL + ticker
 }
