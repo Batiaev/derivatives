@@ -10,7 +10,32 @@ Futures and option tickers parser for Moscow Exchange.
 
 ## Test run
 
-`http://localhost:9001/derivatives/parse?ticker=Si130015BB6B`
+`$ ./gradlew bootRun`
+
+**Request**
+
+`GET http://localhost:9001/derivatives/parse?ticker=Si130015BB6B`
+
+**Response**
+
+```
+{
+     "type": "OPTION",
+     "ticker": "Si130015BB6B",
+     "baseAsset": {
+         "code": "Si",
+         "ticker": "Si",
+         "name": "курс доллар США – российский рубль"
+     },
+     "strike": "130015",
+     "optionType": "CALL",
+     "year": 2016,
+     "month": "FEBRUARY",
+     "optionExpirationWeek": 2,
+     "weekly": true
+ }
+```
+
 
 # Author
 

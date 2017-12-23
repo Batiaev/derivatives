@@ -18,6 +18,17 @@ import org.springframework.web.bind.annotation.RestController
 class RestController @Autowired constructor(
         private val parser: Parser
 ) {
+    @GetMapping("/")
+    fun index(): String {
+        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\">" +
+                "<title>FORTS ticker parser</title></head><body>" +
+                "<form action=\"./parse\" method=\"GET\">" +
+                "<input type=\"text\" name=\"ticker\" placeholder=\"add ticker e.g. SiH8\"> " +
+                "<input type=\"submit\" value=\"Parse\">" +
+                "</form>" +
+                "</body></html>"
+    }
+
     @GetMapping("/parse")
     fun parse(@RequestParam(value = "ticker", defaultValue = "SiH8") ticker: String): Any {
         return if (ticker.length == 4 || ticker.length == 6) parser.parseFutTicker(ticker);

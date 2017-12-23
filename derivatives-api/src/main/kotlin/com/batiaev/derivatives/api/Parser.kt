@@ -38,7 +38,7 @@ class Parser(private val repository: AssetRepository) {
             strike = ticker.substring(2, ticker.length - 3)
         }
         var year = currYear / 10 * 10 + yearChar
-        if (year < currYear) year += 10
+        if (yearChar == 9) year += 10
 
         optionWeek = if (isWeekly) {
             when (optionWeekChar) {
@@ -101,7 +101,7 @@ class Parser(private val repository: AssetRepository) {
         val currYear = LocalDate.now().year
         val yearChar = Integer.valueOf(ticker.substring(ticker.length - 1))
         var year = currYear / 10 * 10 + yearChar
-        if (year < currYear) year += 10
+        if (yearChar == 9) year += 10
 
         val monthChar = ticker.substring(ticker.length - 2, ticker.length - 1)
         var month = Month.JANUARY
